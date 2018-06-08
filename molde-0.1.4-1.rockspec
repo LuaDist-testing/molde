@@ -1,10 +1,10 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = 'molde'
-version = '0.1.3-1'
+version = '0.1.4-1'
 -- LuaDist source
 source = {
-  tag = "0.1.3-1",
+  tag = "0.1.4-1",
   url = "git://github.com/LuaDist-testing/molde.git"
 }
 -- Original source
