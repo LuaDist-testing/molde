@@ -1,15 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = 'molde'
-version = '0.1.6-1'
+version = '1.0.0-1'
 -- LuaDist source
 source = {
-  tag = "0.1.6-1",
+  tag = "1.0.0-1",
   url = "git://github.com/LuaDist-testing/molde.git"
 }
 -- Original source
 -- source = {
 -- 	url = 'git://github.com/gilzoide/molde',
+-- 	tag = 'v1.0.0',
 -- }
 description = {
 	summary = 'A template engine for Lua 5.1+',
@@ -23,7 +24,7 @@ the optionally sandboxed environment.
 }
 dependencies = {
 	'lua >= 5.1',
-	'lpeglabel',
+	'lpeglabel >= 1.5',
 }
 build = {
 	type = 'builtin',

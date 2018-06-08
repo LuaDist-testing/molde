@@ -20,7 +20,7 @@ local lpeg = require 'lpeglabel'
 local re = require 'relabel'
 
 local molde = {
-	VERSION = "1.0.1",
+	VERSION = "1.0.0",
 	__script_prefix = "local __molde = {}",
 	__script_suffix = "return __molde_table.concat(__molde)",
 	__script_literal = "__molde_table.insert(__molde, [%s[%s]%s])",
@@ -60,11 +60,12 @@ Char <- '\{' -> '{'
 
 
 function molde.parse(template)
-	local res, label, pos = grammar:match(template)
+	local res, label, suf = grammar:match(template)
 	if res then
 		return res
 	else
-		local lin, col = re.calcline(template, pos)
+		local whereErr = #template - suf
+		local lin, col = re.calcline(template, whereErr)
 		return nil, string.format("%s at %d:%d", molde.errors[label], lin, col)
 	end
 end
